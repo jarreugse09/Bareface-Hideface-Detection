@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-SEE | Security Feed</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="dark-mode">
+    <div class="wrapper">
+      <header class="topbar">
+        <div class="title">AI-SEE Security</div>
+        <div class="mode-toggle">
+          <button id="toggle_mode">Toggle Theme</button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <aside class="sidebar">
+          <div class="sidebar-icons">
+            <button title="Feed" class="active">
+              <i class="fas fa-video"></i>
+            </button>
+            <button title="Notifications"><i class="fas fa-bell"></i></button>
+            <button title="Settings"><i class="fas fa-cog"></i></button>
+          </div>
+        </aside>
+
+        <section class="feed-panel">
+          <div class="feed-header">
+            <div class="camera-info">CAM-01 / Live</div>
+            <div class="feed-time" id="feed_time">--:--:--</div>
+          </div>
+          <div class="video-frame">
+            <img id="video_feed" src="/video_feed" alt="Video Feed" />
+          </div>
+        </section>
+
+        <section class="controls-panel">
+          <h2>Controls</h2>
+          <div class="control-buttons">
+            <button id="start_btn" onclick="startRecording()">
+              <i class="fas fa-play-circle"></i> Start Recording
+            </button>
+            <button id="stop_btn" onclick="stopRecording()" disabled>
+              <i class="fas fa-stop-circle"></i> Stop Recording
+            </button>
+          </div>
+          <button id="sos_btn" class="sos-btn">SOS</button>
+        </section>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

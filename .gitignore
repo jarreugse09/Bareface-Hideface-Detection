@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.idea/
+
+# YOLOv5
+runs/
+yolov8n.pt
+
+# Empty Directory
+empty/
+
+# Gemini
+.qodo/

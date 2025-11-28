@@ -1,0 +1,5 @@
+train: ../empty
+val: ../test/images
+
+nc: 2
+names: ['bareface', 'hide-face']
